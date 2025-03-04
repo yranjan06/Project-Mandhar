@@ -4,126 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar Design</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      background-color: #ebd66a; /* Lighter yellow */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .navbar-container {
-      width: 100%;
-      max-width: 1200px;
-      padding: 16px;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: white;
-      border-radius: 50px;
-      padding: 16px 40px;
-      border: 1px solid rgba(0, 0, 0, 0.1); /* Replaced shadow with border */
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background-color: #ff4d4d;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-icon svg {
-      width: 18px;
-      height: 18px;
-      fill: white;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: space-around; /* Added equal spacing */
-      align-items: center;
-      flex-grow: 1;
-      list-style: none;
-      margin-left: 40px; /* Added space between logo and nav-links */
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 700; /* Bolder text */
-      font-size: 15px;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ff4d4d;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 1100;
-    }
-
-   @media (max-width: 950px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%; /* Place below the navbar */
-    left: 16px; /* Align with navbar padding */
-    right: 16px; /* Keep it horizontally aligned */
-    background-color: white;
-    flex-direction: column;
-    gap: 15px; /* Add space between options */
-    padding: 20px;
-    border-radius: 12px; /* Softer edges */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .nav-links.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .mobile-menu-btn {
-    display: block;
-  }
-}
-
-  </style>
+  <link rel="stylesheet" href="assets/Navbar.css">
 </head>
 <body>
   <div class="navbar-container">
@@ -136,8 +17,8 @@
         </div>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#mandhar">Mandhar</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -146,17 +27,15 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button class="mobile-menu-btn">☰</button>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <span class="menu-icon">☰</span>
+        <span class="close-icon">✕</span>
+      </button>
+      
+      <div class="menu-backdrop"></div>
     </nav>
   </div>
 
-  <script>
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-
-  mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-  </script>
+  
 </body>
 </html>
