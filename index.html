@@ -3,39 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Design</title>
+  <title>Mentor Connection Platform</title>
   <link rel="stylesheet" href="assets/Navbar.css">
+  <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
-  <div class="navbar-container">
-    <nav class="navbar">
-      <div class="logo">
-        <div class="logo-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M3.9,12c0-1.71,1.39-3.1,3.1-3.1h4V7H7c-2.76,0-5,2.24-5,5s2.24,5,5,5h4v-1.9H7C5.29,15.1,3.9,13.71,3.9,12z M8,13h8v-2H8V13z M17,7h-4v1.9h4c1.71,0,3.1,1.39,3.1,3.1c0,1.71-1.39,3.1-3.1,3.1h-4V17h4c2.76,0,5-2.24,5-5S19.76,7,17,7z" fill="white"/>
-          </svg>
+  <div class="page-container">
+    <!-- Navbar section -->
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M3.9,12c0-1.71,1.39-3.1,3.1-3.1h4V7H7c-2.76,0-5,2.24-5,5s2.24,5,5,5h4v-1.9H7C5.29,15.1,3.9,13.71,3.9,12z M8,13h8v-2H8V13z M17,7h-4v1.9h4c1.71,0,3.1,1.39,3.1,3.1c0,1.71-1.39,3.1-3.1,3.1h-4V17h4c2.76,0,5-2.24,5-5S19.76,7,17,7z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#mandhar">Mandhar</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <span class="menu-icon">☰</span>
+          <span class="close-icon">✕</span>
+        </button>
+        
+        <div class="menu-backdrop"></div>
+      </nav>
+    </div>
+
+    <!-- Mentor heading section -->
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="left-section">
+          <div class="logo-circle"></div>
+          <h1 class="heading">
+            <span class="heading-line">We Help People</span>
+            <span class="heading-line">Connect with Their</span>
+            <span class="heading-line">Right Mentors.</span>
+          </h1>
+          <p class="description">We have the right mentors for any job, we will find you the right mentor and help you to connect with them easily and effectively.</p>
+        </div>
+        <div class="right-section">
+          <!-- This will contain your illustrations as shown in the image -->
+          <div class="illustrations-container">
+            <!-- Illustrations can be added here later -->
+          </div>
         </div>
       </div>
-
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#mandhar">Mandhar</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#membership">Membership</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
-        <span class="menu-icon">☰</span>
-        <span class="close-icon">✕</span>
-      </button>
-      
-      <div class="menu-backdrop"></div>
-    </nav>
+    </div>
   </div>
 
-  
+  <script src="assets/main.js"></script>
 </body>
 </html>
