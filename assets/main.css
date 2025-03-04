@@ -15,15 +15,18 @@ body {
     max-width: 1200px;
     background-color: white;
     border-radius: 80px 80px 80px 80px;
-    margin: 20px;
+    margin: 60px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Hero section container */
 .hero-container {
     width: 100%;
     padding: 0 20px 60px;
+    
+   
 }
 
 /* Hero content layout */
@@ -31,6 +34,7 @@ body {
     display: flex;
     position: relative;
     z-index: 1;
+    
 }
 
 /* Left section of hero */

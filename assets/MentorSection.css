@@ -9,7 +9,7 @@
 /* Left section of mentor section */
 .left-section {
     width: 50%;
-    padding: 60px 40px;
+    padding: 80px 40px;
     box-sizing: border-box;
 }
 
@@ -18,7 +18,7 @@
     width: 50%;
     background-color: #f8f8f8;
     min-height: 500px;
-    border-radius: 20px;
+    border-radius: 80px;
 }
 
 /* Mentor logo styles */
