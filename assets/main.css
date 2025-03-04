@@ -1,14 +1,16 @@
-/* Main content styles */
+/* Global body styling */
 body {
-    background-color: #ffd76b;
+    background-color: #ffd76b; /* Soft yellow background */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     min-height: 100vh;
-  }
-  
-  .page-container {
+    font-family: Arial, sans-serif;
+}
+
+/* Page container styles */
+.page-container {
     width: 100%;
     max-width: 1200px;
     background-color: white;
@@ -16,66 +18,72 @@ body {
     margin: 20px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Hero section styles */
-  .hero-container {
+}
+
+/* Hero section container */
+.hero-container {
     width: 100%;
     padding: 0 20px 60px;
-  }
-  
-  .hero-content {
+}
+
+/* Hero content layout */
+.hero-content {
     display: flex;
     position: relative;
     z-index: 1;
-  }
-  
-  .left-section {
+}
+
+/* Left section of hero */
+.left-section {
     width: 50%;
     padding: 80px 40px 40px 40px;
     box-sizing: border-box;
-  }
-  
-  .right-section {
+}
+
+/* Right section of hero */
+.right-section {
     width: 50%;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-  }
-  
-  .logo-circle {
+}
+
+/* Logo circle in hero section */
+.logo-circle {
     width: 60px;
     height: 60px;
     border: 6px solid #ff4d4d;
     border-radius: 50%;
     margin-bottom: 40px;
-  }
-  
-  .heading {
+}
+
+/* Heading styles */
+.heading {
     font-size: 3.2rem;
     line-height: 1.2;
     font-weight: 700;
     color: #1A1A1A;
     margin: 0 0 25px 0;
     font-family: Georgia, serif;
-  }
-  
-  .heading-line {
+}
+
+.heading-line {
     display: block;
-  }
-  
-  .description {
+}
+
+/* Description text styles */
+.description {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #4A4A4A;
     max-width: 90%;
     font-family: Arial, sans-serif;
-  }
-  
-  /* Connect navbar and hero section with curved design */
-  .navbar::after {
+}
+
+/* Navbar and hero section connection */
+.navbar::after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -84,40 +92,41 @@ body {
     height: 40px;
     background-color: white;
     z-index: -1;
-  }
-  
-  /* Responsive styles for hero section */
-  @media (max-width: 950px) {
+}
+
+/* Responsive design for tablets */
+@media (max-width: 950px) {
     .hero-content {
-      flex-direction: column;
+        flex-direction: column;
     }
     
     .left-section,
     .right-section {
-      width: 100%;
-      padding: 20px;
+        width: 100%;
+        padding: 20px;
     }
     
     .heading {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
     
     .description {
-      max-width: 100%;
+        max-width: 100%;
     }
-  }
-  
-  @media (max-width: 600px) {
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
     .page-container {
-      margin: 10px;
-      border-radius: 20px;
+        margin: 10px;
+        border-radius: 20px;
     }
     
     .heading {
-      font-size: 2rem;
+        font-size: 2rem;
     }
     
     .description {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  }
+}
