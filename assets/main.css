@@ -48,6 +48,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 80px; /* Add padding to push content down */
 }
 
 /* Logo circle in hero section */
@@ -171,4 +172,9 @@ body {
         font-size: 18px;
         padding: 12px 20px;
     }
+}
+
+
+.illustrations-container {
+    margin-top: 40px; /* This will push the entire container down */
 }
