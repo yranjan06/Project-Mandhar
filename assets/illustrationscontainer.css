@@ -2,7 +2,7 @@
 .illustrations-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(z, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     width: 100%;
     height: 600px;
@@ -18,39 +18,57 @@
     border-radius: 20px;
     background-color: #f9f9f9;
     transition: transform 0.3s ease;
+    /* Ensure consistent size */
+    width: 100%;
+    height: 100%;
 }
 
+/* First item styling */
 .illustrations-container .illustration-item:first-child {
     border-radius: 60px 40px 60px 200px;
 }
 
-
+/* Second item - almost circular with one 90-degree corner (top-right) but smaller */
 .illustrations-container .illustration-item:nth-child(2) {
-    border-radius: 200px 200px 200px 200px;
+    /* Create a mostly circular shape with a 90-degree corner at the top-right */
+    border-radius: 200px 200px  0 200px;
+    /* Make it smaller - reduced from 0.9 to 0.75 */
+    transform: scale(0.75);
+    /* Center it in its cell */
+    margin: auto;
+    /* Smooth transition for transform */
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-
+/* Third item */
 .illustrations-container .illustration-item:nth-child(3) {
     border-radius: 40px 60px 80px 50px;
 }
 
-
+/* Fourth item */
 .illustrations-container .illustration-item:nth-child(4) {
     border-radius: 40px 60px 80px 50px;
 }
 
-
+/* Fifth item */
 .illustrations-container .illustration-item:nth-child(5) {
     border-radius: 40px 60px 80px 50px;
 }
 
-
+/* Sixth item */
 .illustrations-container .illustration-item:nth-child(6) {
     border-radius: 40px 60px 80px 50px;
 }
 
-.illustration-item:hover {
+/* Hover effect for all items except the second */
+.illustration-item:not(:nth-child(2)):hover {
     transform: scale(1.05);
+    border-color: #c0c0c0;
+}
+
+/* Custom hover effect for the second item to maintain its smaller size */
+.illustration-item:nth-child(2):hover {
+    transform: scale(0.8);
     border-color: #c0c0c0;
 }
 
@@ -70,6 +88,15 @@
         height: 700px;
         gap: 10px;
     }
+    
+    /* Adjust second item size for tablets */
+    .illustrations-container .illustration-item:nth-child(2) {
+        transform: scale(0.7);
+    }
+    
+    .illustration-item:nth-child(2):hover {
+        transform: scale(0.75);
+    }
 }
 
 @media (max-width: 600px) {
@@ -78,5 +105,14 @@
         grid-template-rows: repeat(6, 1fr);
         height: 900px;
         gap: 8px;
+    }
+    
+    /* Adjust second item size for mobile */
+    .illustrations-container .illustration-item:nth-child(2) {
+        transform: scale(0.65);
+    }
+    
+    .illustration-item:nth-child(2):hover {
+        transform: scale(0.7);
     }
 }
