@@ -49,18 +49,97 @@
 }
 
 /* Fourth item */
+/* Fourth item - vertical rectangle with smooth curves */
 .illustrations-container .illustration-item:nth-child(4) {
-    border-radius: 40px 60px 80px 50px;
+    border-radius: 80px;  /* Smooth, consistent curves on all corners */
+    aspect-ratio: 2.7 / 3;  /* Vertical rectangle (height > width) */
+    width: 70%;  /* Control the width relative to its container */
+    height: auto;  /* Height will be determined by the aspect-ratio */
+    margin: auto;  /* Center it in its cell */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);  /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Fifth item */
+/* Hover effect for the fourth item */
+.illustrations-container .illustration-item:nth-child(4):hover {
+    transform: translateY(-5px) scale(1.02);  /* Slight lift and scale effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);  /* Enhanced shadow on hover */
+}
+
+/* Ensure content fits well in the vertical rectangle */
+.illustrations-container .illustration-item:nth-child(4) svg,
+.illustrations-container .illustration-item:nth-child(4) object {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+/* Fifth item - perfect circle */
 .illustrations-container .illustration-item:nth-child(5) {
-    border-radius: 40px 60px 80px 50px;
+    border-radius: 70%;  /* This creates a circle */
+    aspect-ratio: 1 / 1;  /* Force a perfect square before border-radius makes it a circle */
+    width: 80%;  /* Control the size relative to the container */
+    height: 0;  /* Height will be determined by aspect-ratio */
+    padding-bottom: 80%;  /* This creates the height equal to width for perfect circle */
+    margin: auto;  /* Center it in its cell */
+    border: 3px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+   
 }
 
+/* Position the content inside the circle correctly */
+.illustrations-container .illustration-item:nth-child(5) svg,
+.illustrations-container .illustration-item:nth-child(5) object {
+    position: absolute;
+    max-width: 85%;
+    max-height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+/* Custom hover effect for the fifth item */
+.illustrations-container .illustration-item:nth-child(5):hover {
+    transform: scale(1.05);
+    border-color: #c0c0c0;
+}
 /* Sixth item */
+/* Sixth item - horizontal rectangle with smooth curves */
 .illustrations-container .illustration-item:nth-child(6) {
-    border-radius: 40px 60px 80px 50px;
+    border-radius: 80px;  /* Smooth, consistent curves on all corners */
+    aspect-ratio: 3 / 1.9;  /* Horizontal rectangle (width > height) */
+    width: 90%;  /* Control the width relative to its container */
+    height: auto;  /* Height will be determined by the aspect-ratio */
+    margin: auto;  /* Center it in its cell */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);  /* Subtle shadow for depth */
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for the sixth item */
+.illustrations-container .illustration-item:nth-child(6):hover {
+    transform: translateX(5px) scale(1.03);  /* Slight shift and scale effect */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);  /* Enhanced shadow on hover */
+    border-color: #c0c0c0;
+}
+
+/* Ensure content fits well in the horizontal rectangle */
+.illustrations-container .illustration-item:nth-child(6) svg,
+.illustrations-container .illustration-item:nth-child(6) object {
+    max-width: 88%;
+    max-height: 88%;
+    object-fit: contain;
 }
 
 /* Hover effect for all items except the second */
@@ -118,4 +197,57 @@
     .illustration-item:nth-child(2):hover {
         transform: scale(0.7);
     }
+}
+/* Improved SVG sizing for all illustration items */
+.illustration-item svg,
+.illustration-item object {
+    width: 95%;  /* Increase from 90% to 95% to fill more of the container */
+    height: 95%;  /* Match the width for consistent sizing */
+    object-fit: contain;  /* Maintain aspect ratio while filling the space */
+}
+
+/* First item SVG sizing */
+.illustrations-container .illustration-item:first-child svg,
+.illustrations-container .illustration-item:first-child object {
+    width: 95%;
+    height: 95%;
+}
+
+/* Second item SVG sizing - for the scaled down item */
+.illustrations-container .illustration-item:nth-child(2) svg,
+.illustrations-container .illustration-item:nth-child(2) object {
+    width: 98%;  /* Nearly fill the entire scaled container */
+    height: 98%;
+}
+
+/* Third item SVG sizing */
+.illustrations-container .illustration-item:nth-child(3) svg,
+.illustrations-container .illustration-item:nth-child(3) object {
+    width: 98%;
+    height: 98%;
+}
+
+/* Fourth item SVG sizing - for vertical rectangle */
+.illustrations-container .illustration-item:nth-child(4) svg,
+.illustrations-container .illustration-item:nth-child(4) object {
+    width: 92%;
+    height: 92%;
+}
+
+/* Fifth item SVG sizing - for circle */
+.illustrations-container .illustration-item:nth-child(5) svg,
+.illustrations-container .illustration-item:nth-child(5) object {
+    width: 90%;
+    height: 90%;
+    position: absolute;  /* Needed if using padding-bottom technique for circle */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Center in circle */
+}
+
+/* Sixth item SVG sizing - for horizontal rectangle */
+.illustrations-container .illustration-item:nth-child(6) svg,
+.illustrations-container .illustration-item:nth-child(6) object {
+    width: 94%;
+    height: 94%;
 }
