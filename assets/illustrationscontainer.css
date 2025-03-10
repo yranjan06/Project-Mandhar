@@ -30,19 +30,22 @@
 
 /* Second item - almost circular with one 90-degree corner (top-right) but smaller */
 .illustrations-container .illustration-item:nth-child(2) {
-    /* Create a mostly circular shape with a 90-degree corner at the top-right */
-    border-radius: 200px 200px  0 200px;
-    /* Make it smaller - reduced from 0.9 to 0.75 */
-    transform: scale(0.75);
-    /* Center it in its cell */
-    margin: auto;
-    /* Smooth transition for transform */
-    transition: transform 0.3s ease, border-color 0.3s ease;
+   
+    border-radius: 200px 200px  0 200px;               /* Create a mostly circular shape with a 90-degree corner at the top-right */
+    
+    transform: scale(0.75);                            /* Make it smaller - reduced from 0.9 to 0.75 */
+   
+    margin: auto;                                      /* Center it in its cell */
+    
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for transform */
 }
 
 /* Third item */
 .illustrations-container .illustration-item:nth-child(3) {
-    border-radius: 40px 60px 80px 50px;
+    border-radius: 200px 200px  0 200px;
+    transform: scale(0.75);
+    margin: auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 /* Fourth item */
